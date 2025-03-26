@@ -19,7 +19,8 @@
     "dev": "medusa develop",
     "test:integration:http": "TEST_TYPE=integration:http NODE_OPTIONS=--experimental-vm-modules jest --silent=false --runInBand --forceExit",
     "test:integration:modules": "TEST_TYPE=integration:modules NODE_OPTIONS=--experimental-vm-modules jest --silent --runInBand --forceExit",
-    "test:unit": "TEST_TYPE=unit NODE_OPTIONS=--experimental-vm-modules jest --silent --runInBand --forceExit"
+    "test:unit": "TEST_TYPE=unit NODE_OPTIONS=--experimental-vm-modules jest --silent --runInBand --forceExit",
+    "predeploy": "medusa db:migrate"
   },
   "dependencies": {
     "@medusajs/admin-sdk": "2.6.1",
@@ -34,6 +35,7 @@
     "pg": "^8.13.0"
   },
   "devDependencies": {
+    "@flydotio/dockerfile": "^0.7.9",
     "@medusajs/test-utils": "2.6.1",
     "@mikro-orm/cli": "6.4.3",
     "@swc/core": "1.5.7",
