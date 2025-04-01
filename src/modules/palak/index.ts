@@ -1,4 +1,5 @@
 import PalakModuleService from "./service"
+import { Module } from '@medusajs/framework/utils'
 
 // Export module name as a constant for easier reference
 export const PALAK_MODULE = "palak"
@@ -11,4 +12,4 @@ const moduleDefinition = {
   service: PalakModuleService
 }
 
-export default moduleDefinition
+export default Module(PALAK_MODULE, moduleDefinition)
