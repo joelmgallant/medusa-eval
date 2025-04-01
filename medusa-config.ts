@@ -21,4 +21,13 @@ module.exports = defineConfig({
   admin: {
     disable: process.env.DISABLE_MEDUSA_ADMIN === "true",
   },
+  modules: [
+    {
+      resolve: "./src/modules/palak",
+      options: {
+        apiKey: process.env.PALAK_API_KEY || "dummy-api-key",
+        apiUrl: process.env.PALAK_API_URL || "https://api.palak.example.com",
+      }
+    }
+  ],
 });
